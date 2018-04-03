@@ -1,4 +1,4 @@
-# Anteater - CI / CD Gate Check Framework
+## Anteater - CI / CD Gate Check Framework
 
 Anteater is an open framework to prevent the unwanted merging of
 nominated strings, filenames, binaries, depreciated functions, staging
@@ -8,10 +8,8 @@ regular expression syntax, can be sniffed out by anteater.
 You tell anteater exactly what you don't want to get merged, and
 anteater looks after the rest.
 
-If anteater finds something, it exits with a non-zero code which in turn
-fails the build of your CI tool, with the idea that it would prevent a pull
-request merging. Any false positives are easily negated by using the
-same RegExp framework to cancel out the false match.
+Any false positives are easily negated by using the same RegExp
+framework to cancel out the false match.
 
 Entire projects may also be scanned also, using a recursive directory
 walk.
@@ -65,5 +63,20 @@ Or even..
 If any binaries are found, IP address (public) and URLs, they will be
 scanned with the Virus Total API (unless whitelisted by you).
 
-For a deeper overview, its best to consult the [docs](http://anteater.readthedocs.io/en/latest/)
+Why RegExp and not AI / Machine Learning / Blockchain etc
+---------------------------------------------------------
 
+The fact is that near on everyone knows regular expressions
+and if they don't its not to challenging to learn. Regular
+expressions can also be universally applied to all different
+languages, scripts, config files etc.
+
+Anteater is not reliant on a project being Java or Python or
+any specific language, so its not limited to needing
+abstract syntax tree or compiler of a specific language.
+
+Its made for a DevOps world, where code is in the form of bash
+scripts, jinja2, groovy templates, yaml / json files source code
+and developers can check in any sort of file type or content.
+
+For a deeper overview, its best to consult the [docs](http://anteater.readthedocs.io/en/latest/)
