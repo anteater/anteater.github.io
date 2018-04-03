@@ -38,7 +38,7 @@ enviroment.
 
 Let's take a look at some examples:
 
-```
+```yaml
 apprun:
   regex: app\.run\s*\(.*debug.*=.*True.*\)
   desc: "Running flask in debug mode could potentially leak sensitive data"
@@ -48,11 +48,13 @@ Anteater also works with filenames:
 
 For Example:
 
-``jenkins\.plugins\.publish_over_ssh\.BapSshPublisherPlugin\.xml``
+```bash
+jenkins\.plugins\.publish_over_ssh\.BapSshPublisherPlugin\.xml``
+```
 
 Or even..
 
-```
+```bash
 - \.pypirc
 - \.gem\/credentials
 - aws_access_key_id
@@ -63,17 +65,26 @@ Or even..
 If any binaries are found, IP address (public) and URLs, they will be
 scanned with the Virus Total API (unless whitelisted by you).
 
+```bash
+INFO - Found what I believe is a URL: <script src = "https://coin-hive.com/lib/coinhive.min.js"></script><script>
+INFO - Rate limit clear
+INFO - Report found, job complete for https://coin-hive.com/lib/coinhive.min.js
+ERROR - https://coin-hive.com/lib/coinhive.min.js  is recorded as a malicious site by ADMINUSLabs
+ERROR - https://coin-hive.com/lib/coinhive.min.js  recorded as a malware site by Yandex Safebrowsing
+ERROR - Full report available here: https://www.virustotal.com/#/url/2a6ae27b9692354ebbb693594f3aca910dc3b0418063c69859bd80bca8a6a8c6/detection
+```
+
 Why RegExp and not AI / Machine Learning / Blockchain etc
 ---------------------------------------------------------
 
 The fact is that near on everyone knows regular expressions
-and if they don't its not to challenging to learn. Regular
+and if they don't, its not to challenging to learn. Regular
 expressions can also be universally applied to all different
 languages, scripts, config files etc.
 
 Anteater is not reliant on a project being Java or Python or
-any specific language, so its not limited to needing
-abstract syntax tree or compiler of a specific language.
+any specific language, so its not limited to needing a certain
+abstract syntax tree or the compiler of a specific language.
 
 Its made for a DevOps world, where code is in the form of bash
 scripts, jinja2, groovy templates, yaml / json files source code
