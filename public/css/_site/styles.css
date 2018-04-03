@@ -63,14 +63,14 @@ a.btn-cta-primary,
 }
 a.btn-cta-primary:hover,
 .btn-cta-primary:hover {
-  background:#a5a8aa;
-  border: 1px solid #a5a8aa;
+  background: #22364a;
+  border: 1px solid #22364a;
   color: #fff;
 }
 a.btn-cta-secondary,
 .btn-cta-secondary {
-  background: #2a435c;
-  border: 1px solid #2a435c;
+  background: #c9ccd6;
+  border: 1px solid #6d6e72;
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
@@ -78,8 +78,8 @@ a.btn-cta-secondary,
 a.btn-cta-secondary:hover,
 
 .btn-cta-secondary:hover {
-  background:#a5a8aa;
-  border: 1px solid #a5a8aa;
+  background: #f25794;
+  border: 1px solid #f25794;
   color: #fff;
 }
 .text-highlight {

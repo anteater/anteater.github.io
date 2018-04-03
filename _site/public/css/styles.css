@@ -63,22 +63,23 @@ a.btn-cta-primary,
 }
 a.btn-cta-primary:hover,
 .btn-cta-primary:hover {
-  background: #22364a;
-  border: 1px solid #22364a;
+  background:#a5a8aa;
+  border: 1px solid #a5a8aa;
   color: #fff;
 }
 a.btn-cta-secondary,
 .btn-cta-secondary {
-  background: #f46fa3;
-  border: 1px solid #f46fa3;
+  background: #2a435c;
+  border: 1px solid #2a435c;
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
 }
 a.btn-cta-secondary:hover,
+
 .btn-cta-secondary:hover {
-  background: #f25794;
-  border: 1px solid #f25794;
+  background:#a5a8aa;
+  border: 1px solid #a5a8aa;
   color: #fff;
 }
 .text-highlight {
