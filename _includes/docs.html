@@ -1,63 +1,54 @@
-    <!-- ******DOCS****** -->
-    <section id="docs" class="docs section">
-        <div class="container">
-            <div class="docs-inner">
-            <h2 class="title text-center">Get Started</h2>
-            <div class="block">
-                <h3 class="sub-title text-center">PIP</h3>
-                <p>anteater is best installed using pip where the lastest stable release can be found.</p>
-                <div class="code-block">
-                    <pre><code class="language-markup">
-                pip install anteater
-                     </code></pre>
-                </div><!--//code-block-->
-            </div><!--//block-->
+<!-- ******DOCS****** -->
+<section id="docs" class="docs section">
+    <div class="container">
+        <div class="docs-inner">
+        <h2 class="title text-center">Get Started</h2>
+        <div class="block">
+            <h3 class="sub-title text-center">Install</h3>
+            <p>Anteater is best installed via pip</p>
+            <div class="code-block">
+                <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
+                <pre><code class="language-bash">
+$ pip install anteater
+                 </code></pre>
+            </div><!--//code-block-->
+        </div><!--//block-->
 
-            <div class="block">
-                <h3 class="sub-title text-center">travis-ci</h3>
-                <p>To config Travis CI to use anteater.</p>
+        <div class="block">
+            <h3 class="sub-title text-center">Configure</h3>
+            <p>Set your filters</p>
 
-                <div class="code-block">
-                    <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
-                    <pre>
-    <code class="language-yaml">
-	language: python
+            <div class="code-block">
+                <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
+                <pre>
+                  <code class="language-yaml">
+file_contents:
+  clone:
+    regex: git.*clone
+    desc: "Clone blocked as using an non approved external source"
+                  </code></pre>
+            </div><!--//code-block-->
+            <p>Set a whitelist RegExp</p>
 
-	python:
-	  - "2.7"
+            <div class="code-block">
+                <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
+                <pre>
+                  <code class="language-yaml">
+file_contents:
+  - git clone https:\/\/github\.com\\trusted_acme\\.+
+                  </code></pre>
+            </div><!--//code-block-->
+        </div><!--//block-->
 
-	install:
-	  - pip install anteater
 
-	before_script:
-	  - git diff --name-only HEAD^ > ./patch
-	script:
-	  - anteater --project antest --patchset ./patch
-    </code></pre>
-                </div><!--//code-block-->
-            </div><!--//block-->
+        <div class="block">
+            <h3 class="sub-title text-center">Full Documentation</h3>
+            <p>For more indepth details, please refer to the latest documentation on our readthedocs site.</p>
+            <p class="text-center">
+                <a class="btn btn-cta-primary" href="http://anteater.readthedocs.io/en/latest/" target="_blank">Read the Docs</a>
+            </p>
+        </div><!--//block-->
 
-            <div class="block">
-                <h3 class="sub-title text-center">JavaScript</h3>
-                <p>Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit ligula eget dolor.</p>
-                <div class="code-block">
-                    <pre><code class="language-javascript">
-    if( awesome ){
-        console.log('This is Awesome');
-    }else{
-        $('body').addClass('give-me-awesome');
-    }
-                    </code></pre>
-                </div><!--//code-block-->
-            </div><!--//block-->
-            <div class="block">
-                <h3 class="sub-title text-center">Full Documentation</h3>
-                <p>Full documentation is available with details on how to customise and implement your own expressions and filters and intergrate anteater into your DevOps build process.</p>
-                <p class="text-center">
-                    <a class="btn btn-cta-primary" href="http://anteater.readthedocs.io/en/latest/" target="_blank">Read The Docs</a>
-                </p>
-            </div><!--//block-->
-
-            </div><!--//docs-inner-->
-        </div><!--//container-->
-    </section><!--//docs->
+        </div><!--//docs-inner-->
+    </div><!--//container-->
+</section><!--//docs->
