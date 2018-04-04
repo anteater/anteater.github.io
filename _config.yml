@@ -30,7 +30,7 @@ linkedin_username:
 dribbble_username:
 
 # Custom vars
-version:             1.0.1
+version:             1.0
 github:
   repo:              https://github.com/anteater/anteater.io
 
@@ -46,14 +46,8 @@ widgets:
   - title: About
     url: about
     archor: true
-  - title: Features
-    url: features
-    archor: true
   - title: Docs
     url: docs
-    archor: true
-  - title: License
-    url: license
     archor: true
   - title: Blog
     url: blog
