@@ -55,9 +55,6 @@ widgets:
   - title: License
     url: license
     archor: true
-  - title: Contact
-    url: contact
-    archor: true
   - title: Blog
     url: blog
   - title: Page
