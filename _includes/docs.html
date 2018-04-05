@@ -16,29 +16,44 @@ $ pip install anteater
 
         <div class="block">
             <h3 class="sub-title text-center">Configure</h3>
-            <p>Set your filters</p>
+            <p>Set content to block</p>
 
             <div class="code-block">
                 <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
                 <pre>
                   <code class="language-yaml">
-file_contents:
-  clone:
-    regex: git.*clone
-    desc: "Clone blocked as using an non approved external source"
+  apprun:
+    regex: app\.run\s*\(.*debug.*=.*True.*\)
+    desc: "Running flask in debug mode can give away sensitive data"
                   </code></pre>
             </div><!--//code-block-->
-            <p>Set a whitelist RegExp</p>
 
             <div class="code-block">
                 <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
                 <pre>
                   <code class="language-yaml">
-file_contents:
-  - git clone https:\/\/github\.com\\trusted_acme\\.+
+xreadlines:
+  regex: import*.xreadlines|from*.xreadlines
+  desc: "Using 'for line in file', introduced in 2.3, is preferable."
+                  </code></pre>
+            </div><!--//code-block-->
+            <p>Set filenames to block</p>
+            <div class="code-block">
+                <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
+                <pre>
+                  <code class="language-yaml">
+ file_names:
+  - jenkins\.plugins\.publish_over_ssh\.BapSshPublisherPlugin\.xml
+  -  (irb|plsq|mysql|bash|zsh)_history
+  - \.gem\/credentials
+  - key(store|ring)
+  - ovpn
+  - secret_token\.rb
                   </code></pre>
             </div><!--//code-block-->
         </div><!--//block-->
+
+
 
 
         <div class="block">
