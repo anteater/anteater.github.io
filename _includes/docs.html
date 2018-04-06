@@ -51,10 +51,53 @@ xreadlines:
   - secret_token\.rb
                   </code></pre>
             </div><!--//code-block-->
+            <p>Virus Total API - Binary Scanning</p>
+            <div class="code-block">
+                <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
+                <pre>
+                  <code class="language-bash">
+INFO - Non Whitelisted Binary file: /home/luke/repos/anteater/tests/testproject/infected/eicar_com.zip
+INFO - Rate limit clear.
+INFO - Report found, job complete.
+ERROR - Virus Found!
+INFO - File scan date for infected/eicar_com.zip shows a infected status on: 2018-04-04 21:52:26
+INFO - Full report avaliable here: https://www.virustotal.com/file/2546dcffc5ad854d4ddc64fbf056871cd5a00f2471cb7a5bfd4ac23b6e9eedad/analysis/1522878746/
+                  </code></pre>
+            </div><!--//code-block-->
+        <p>Virus Total API - IP Scanning</p>
+        <div class="code-block">
+            <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
+            <pre>
+              <code class="language-bash">
+INFO - Found what I believe is an IP Address: command.server(host='90.156.201.21', port=9190)
+INFO - File python/run.py. Parsed IP Address: 90.156.201.21
+INFO - Rate limit active..please wait...
+INFO - Rate limit clear.
+ERROR - 90.156.201.21 has been known to resolve to the following malicious urls:
+http://igmarealty.ru/ on date: 2018-04-04 20:02:51
+http://new.abrikostur.ru/img on date: 2018-04-04 17:57:02
+http://personnel-sakh.ru/ on date: 2018-04-04 11:55:50
+http://new.abrikostur.ru/img/lib.js on date: 2018-03-31 04:19:13
+INFO - http://new.abrikostur.ru/img/lib.js on date: 2018-03-31 04:19:13
+INFO - http://new.abrikostur.ru/menu/menu-ver2.js on date: 2018-03-29 23:47:56
+              </code></pre>
+        </div><!--//code-block-->
+        <p>Virus Total API - URL Scanning</p>
+        <div class="code-block">
+            <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
+            <pre>
+              <code class="language-bash">
+INFO - File shell/test.sh contains what I believe is a URL: curl -L http://cool-mart.ru/katalog-produkcii
+INFO - Scanning: http://cool-mart.ru/katalog-produkcii
+INFO - Rate limit active..please wait...
+INFO - Rate limit clear.
+INFO - Report found, job complete for http://cool-mart.ru/katalog-produkcii.
+ERROR - http://cool-mart.ru/katalog-produkcii is recorded as a malicious site by ADMINUSLabs
+ERROR - http://cool-mart.ru/katalog-produkcii is recorded as a malware site by Yandex Safebrowsing
+ERROR - Full report available here: https://www.virustotal.com/url/666c50b300b33e15d076359b20d2eac020a2868af4680ad99154dc517f0ca7a4/analysis/1519139134/
+              </code></pre>
+        </div><!--//code-block-->
         </div><!--//block-->
-
-
-
 
         <div class="block">
             <h3 class="sub-title text-center">Full Documentation</h3>
