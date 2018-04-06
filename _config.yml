@@ -24,7 +24,7 @@ bing_verification:
 # Social
 github_username: anteater
 twitter_username: lukeahinds
-instagram_username: kevin/
+instagram_username:
 facebook:
 linkedin_username:
 dribbble_username:
@@ -46,10 +46,6 @@ widgets:
   - title: About
     url: about
     archor: true
-  - title: Docs
+  - title: Get Started
     url: docs
     archor: true
-  - title: Blog
-    url: blog
-  - title: Page
-    url: page
